@@ -1,0 +1,3 @@
+include ':Recordx'
+include ':app'
+rootProject.name = "RecordxExample"
