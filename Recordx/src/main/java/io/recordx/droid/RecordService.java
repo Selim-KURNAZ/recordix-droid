@@ -143,9 +143,9 @@ public class RecordService extends Service {
         String rootDir;
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             if (TextUtils.isEmpty(dirPath)) {
-                rootDir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + "ScreenRecord" + "/";
+                rootDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + "ScreenRecord" + "/";
             } else {
-                rootDir = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + dirPath;
+                rootDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + dirPath;
             }
 
             File file = new File(rootDir);
